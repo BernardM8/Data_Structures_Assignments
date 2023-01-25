@@ -1,6 +1,5 @@
-//Name : Bernard Mulcahy
+//Name : Bernard M
 //Course : CS300 Assignment-2
-//Date : October 17 2020
 //Description : Book class for OOP
 
 #include <iostream>
@@ -20,9 +19,9 @@ Book::Book(string title, int isbn, string authors, string publisher){ //4 parame
 	this->publisher = publisher;
 }
 
-/*Book::~Book(void){//Destructor
-    cout<<"deleting Book object";
-}*/
+Book::~Book(void){//Destructor
+    //cout<<"deleting Book object"<<endl;
+}
 
 void Book::print(){//member function
 	cout<<"title :"<<title<<"ISBN :"<<ISBN<<"authors :"<<authors<<"publisher :"<<publisher<<endl;

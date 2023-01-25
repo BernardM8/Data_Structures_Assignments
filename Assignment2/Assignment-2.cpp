@@ -1,8 +1,8 @@
-//Name : Bernard Mulcahy
+//Name : Bernard M
 //Course : CS300 Assignment-2
-//Date : October 17 2020
 //Description : Book store application to search, remove, or insert books
 
+#include <string>
 #include <iostream>
 #include "Book.h"
 #include "BookstoreManager.h"
@@ -15,17 +15,22 @@ BookstoreManager bookstoreManager;
 bookstoreManager.isEmpty();
 
 //insert 4 books
-string title, authors, publisher;
+string title, authors, publisher, isbnStr;
 int isbn;
 for(int i=0;i<4;i++){
     cout<<"Enter book title: ";
-    cin>>title;
+    //cin>>title;
+    getline(std::cin, title);
     cout<<"Enter authors: ";
-    cin>>authors;
+    //cin>>authors;
+    getline(std::cin, authors);
     cout<<"Enter isbn: ";
-    cin>>isbn;
+    //cin>>isbn;
+    getline(std::cin, isbnStr);
     cout<<"Enter publisher: ";
-    cin>>publisher;
+    //cin>>publisher;
+    getline(std::cin, publisher);
+    isbn=stoi(isbnStr);
     Book aBook(title, isbn, authors, publisher);
     bookstoreManager.insert(aBook);
     cout<<endl;
@@ -40,7 +45,7 @@ cout<<"ISBN:";
 cin>>isbn;
 Book b2(isbn);
 bookstoreManager.search(b2);
-/*
+
 //remove a book
 cout<<"Removing…"<<endl;
 cout<<"ISBN:";
@@ -56,7 +61,7 @@ cout<<"Removing publisher"<<endl;
 cout<<"Publisher:";
 cin>>publisher;
 bookstoreManager.removePublisher(publisher);
-*/
+
 //print bookstore
 bookstoreManager.print();
 

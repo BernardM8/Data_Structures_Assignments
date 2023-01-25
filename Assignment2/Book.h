@@ -1,6 +1,5 @@
-//Name : Bernard Mulcahy
+//Name : Bernard M
 //Course : CS300 Assignment-2
-//Date : October 17 2020
 //Description : headerfile for Book
 #ifndef BOOK_H
 #define BOOK_H
@@ -22,7 +21,7 @@ class Book{
         //Book();
         Book(int);
         Book(string,int,string,string);
-        //~Book();
+        ~Book();
         void print();
 
         //Getters
